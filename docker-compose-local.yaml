@@ -1,0 +1,44 @@
+version: "3"
+services:
+  notebook:
+    image: notebook-image
+    restart: always
+    ports:
+      - 3000:3000
+  event-bus-service:
+    image: event-bus-image
+    restart: always
+    env_file: ./pseudo-event-bus/env/${ENV}.env
+    ports:
+      - 30000:30000
+  note-service:
+    image: note-service-image
+    restart: always
+    env_file: ./note-service/env/${ENV}.env
+    ports:
+      - 30010:30010
+  behave-service:
+    image: behave-service-image
+    restart: always
+    env_file: ./behave-service/env/${ENV}.env
+    ports:
+      - 30020:30020
+  query-service:
+    image: query-service-image
+    restart: always
+    env_file: ./query-service/env/${ENV}.env 
+    ports:
+      - 30030:30030
+  mongodb:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - 27017:27017
+volumes:
+  mongo-data:
+    driver: local

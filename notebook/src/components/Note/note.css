@@ -1,0 +1,48 @@
+.note-wrap {
+  box-shadow: 4px 4px 4px #efefef;
+}
+
+.note-c {
+  padding: 1rem 2rem;
+}
+
+.note-p {
+  font-size: 0.6rem;
+}
+
+.note-b {
+  margin-top: 1rem;
+}
+
+.note-button {
+  border: 0px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+}
+
+.status-off {
+  background-color: #efefef;
+  color: #666666;
+}
+
+.status-on {
+  background-color: #5ce468;
+  color: #ffffff;
+}
+
+.status-finished {
+  background-color: #efefef;
+  color: #ffffff;
+}
+
+.note-del {
+  cursor: pointer;
+  padding: 1rem;
+  background-color: #ebe5e5;
+  transition: background-color 200ms ease-in-out;
+}
+
+.note-del:hover {
+  background-color: #ff565c;
+}
