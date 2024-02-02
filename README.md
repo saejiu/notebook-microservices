@@ -9,19 +9,19 @@ Thanks to this project I gained a lot of knowledges in the Microservices industr
 
 ![notebook_design](./images/notebook_microservices.png)
 
-*Pseudo Event*
+### Pseudo Event
 Responsibles for capturing the incoming even and spreading the message across all the relate services.
 
-*Query Service*
+### Query Service
 Queries all the data from the database.
 
-*Behave Service*
+### Behave Service
 A separate service, which reponsibles for update the status of the note:
 - planned
 - progress
 - finished
 
-*Note Service*
+### Note Service
 Responsibles for POST, UPDATE, PUT, DELETE http methods for a single note.
 
 ## Branchs
