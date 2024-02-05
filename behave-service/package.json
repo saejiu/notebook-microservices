@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/shelldog/behave-service#readme",
   "devDependencies": {
-    "prettier": "^2.7.1"
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "axios": "^0.27.2",
